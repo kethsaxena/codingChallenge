@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thank You</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Thanks for signing, {{ name }}!</h1>
+    <a href="{{ url_for('home') }}">Back to Guestbook</a>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BBB</title>
+    <style>
+        table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2a2a2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align:center;">Bharat Badly Bharat 🚫</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Link</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for site in bad_websites %}
+            <tr>
+                <td>{{ site.rank }}</td>
+                <td><a href="{{ site.url }}" target="_blank">{{ site.url }}</a></td>
+                <td>{{ site.country }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
