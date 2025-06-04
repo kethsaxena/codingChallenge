@@ -1,0 +1,22 @@
+import time
+import random
+
+def simulate_temperature_sensor(mean_temp=25.0, variation=2.0, interval=1.0):
+    """
+    Simulates a temperature sensor by generating temperature readings.
+    
+    Args:
+    - mean_temp (float): Average temperature.
+    - variation (float): Maximum deviation from average.
+    - interval (float): Time in seconds between readings.
+    """
+    try:
+        while True:
+            temp = random.normalvariate(mean_temp, variation)
+            print(f"Temperature reading: {temp:.2f} °C")
+            time.sleep(interval)
+    except KeyboardInterrupt:
+        print("Sensor simulation stopped.")
+
+# Start simulation
+simulate_temperature_sensor()
