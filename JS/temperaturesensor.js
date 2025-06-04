@@ -40,3 +40,9 @@ setInterval(emitTemperature, INTERVAL_MS);
 
 // Emit once at start
 emitTemperature();
+
+//Exit
+process.on('SIGINT', () => {
+  console.log('\nSensor simulation stopped.');
+  process.exit(0);
+});
